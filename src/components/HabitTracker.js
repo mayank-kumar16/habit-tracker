@@ -1,30 +1,10 @@
 import React, { useState } from 'react';
+import habitsdata from '../data/habitsdata';
 import HabitItem from './HabitItem';
 import ProgressBar from './ProgressBar';
 
 const HabitTracker = () => {
-  const [habits, setHabits] = useState([
-    {
-      id: 1,
-      name: 'Drink Water',
-      completed: false,
-    },
-    {
-      id: 2,
-      name: 'Read Book',
-      completed: false,
-    },
-    {
-      id: 3,
-      name: 'Workout',
-      completed: false,
-    },
-    {
-      id: 4,
-      name: 'Meditation',
-      completed: false,
-    },
-  ]);
+  const [habits, setHabits] = useState(habitsdata);
 
   const toggleHabit = (currentId) => {
     setHabits((prevHabits) => {
@@ -47,12 +27,10 @@ const HabitTracker = () => {
     100
   ).toFixed(0);
 
-  console.log(typeof progressPercentage);
-
   return (
     <div className="h-screen bg-slate-400">
       <h1 className="pt-5 mb-8 text-white text-[50px] font-bold">
-        Habit itacker
+        Habit Tracker
       </h1>
 
       <div className="w-6/12 bg-white mx-auto shadow-sm mb-5">
@@ -71,14 +49,7 @@ const HabitTracker = () => {
       <div className="w-6/12 mx-auto bg-white p-5">
         {habits.map((habit) => {
           return (
-            <HabitItem
-              key={habit.id}
-              habitName={habit.name}
-              id={habit.id}
-              habitStatus={habit.completed}
-              habit={habit}
-              onToggle={toggleHabit}
-            />
+            <HabitItem key={habit.id} habit={habit} onToggle={toggleHabit} />
           );
         })}
       </div>

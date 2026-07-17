@@ -1,3 +1,5 @@
+import { BTN_TXT } from '../constants/buttonText';
+
 const HabitItem = ({ habit, onToggle }) => {
   const { id, name: habitName, completed: habitStatus } = habit;
   return (
@@ -15,7 +17,7 @@ const HabitItem = ({ habit, onToggle }) => {
           onToggle(id);
         }}
       >
-        {habitStatus ? 'Undo' : 'complete'}
+        {habitStatus ? BTN_TXT.undo : BTN_TXT.complete}
       </button>
     </div>
   );
