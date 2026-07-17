@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+# Habit Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple Habit Tracker application built with **React.js** and **Tailwind CSS**.
 
-## Available Scripts
+This project allows users to mark daily habits as completed, track their overall progress, and visualize completion using a progress bar.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Display a list of daily habits
+- Mark habits as Complete
+- Undo completed habits
+- Progress bar updates automatically
+- Completed habits counter
+- Dynamic UI updates using React State
+- Clean and reusable component structure
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🛠️ Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React.js
+- JavaScript (ES6+)
+- Tailwind CSS
+- Git
+- GitHub
 
-### `npm run build`
+## 📂 Folder Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+src/
+│
+├── components/
+│   ├── HabitTracker.js
+│   ├── HabitItem.js
+│   └── ProgressBar.js
+│
+├── data/
+│   └── habitsdata.js
+│
+├── constants/
+│   └── buttonText.js
+│
+├── App.js
+└── index.js
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## ⚙️ Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Clone the repository
 
-### `npm run eject`
+```bash
+git clone https://github.com/your-username/habit-tracker.git
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Go inside the project
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+cd habit-tracker
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Install dependencies
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm install
+```
 
-## Learn More
+Start the development server
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The application will run on:
 
-### Code Splitting
+```
+http://localhost:3000
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## steps for this project
 
-### Analyzing the Bundle Size
+- created different components inside src/components
+- inside HabitTracker using lists of tasks **(habitdata.js)** inside useState habits.
+  - map on habits and calling HabitItem here with props **habit** and onToggle = toggleHabit
+- using all the details and calling **onToggle(ID)**
+- inside toggleHabit I am using map to create new lists with completed task as true and using setHabit to set new list
+- using filter to get completed tasks and showing 1/4
+- calculated percentage of completed tasks and sending it to Progressbar and using it style dynamically
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 👨‍💻 Author
 
-### Making a Progressive Web App
+**Mayank Kumar**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+GitHub: https://github.com/mayank-kumar16
